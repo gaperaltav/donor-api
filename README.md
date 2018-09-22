@@ -32,9 +32,9 @@ let DonationRequest = {
   BloodDonorId: 1, 
   BloodDoneeId: 2, 
   reason: 'I aunt is sick',
-  bloodType: 'AB+',
+  bloodType: 1,
   accepted: true || false,
-  created_at: '',
+  created_at: Date.now(),
   updated_at: ''
 }
 ```
