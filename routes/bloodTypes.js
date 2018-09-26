@@ -24,9 +24,8 @@ router.put('/:id', function (req, res, next) {
 
   BloodType
     .findOneAndUpdate({ id: id }, req.body)
-    .then(type => {
-      res.send(type);
-    }).catch(next);
+    .then(type => res.send(type))
+    .catch(next);
 });
 
 router.delete('/:id', function (req, res, next) {

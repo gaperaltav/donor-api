@@ -22,8 +22,9 @@ const userSchema = new mongoose.Schema({
     required: [true, 'The blood type of the user is required.']   
   },
   isActive:  {
-    type: true,
-    required: [true, 'The name of the user is required.']   
+    type: Boolean,
+    required: true,
+    default: true
   },
   locationLat:  {
     type: String,

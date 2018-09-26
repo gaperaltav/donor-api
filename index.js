@@ -12,11 +12,14 @@ app.use(bodyParser.json());
 mongoose.connect('mongodb://localhost:27017/blood-donor')
 
 // Routes
-const donationsRoutes = require('./routes/donations');
-const bloodTypes = require('./routes/bloodTypes');
+const donationsRoute = require('./routes/donations');
+const bloodTypesRoute = require('./routes/bloodTypes');
+const usersRoute = require('./routes/users');
 
-app.use('/api/donations', donationsRoutes);
-app.use('/api/bloodTypes', bloodTypes);
+// Adding Routes path
+app.use('/api/donations', donationsRoute);
+app.use('/api/bloodTypes', bloodTypesRoute);
+app.use('/api/users', usersRoute);
 
 app.get('/', (req, res) => {
   res.send('Welcome to donations API!');
