@@ -14,27 +14,27 @@ let bloodType = {
 // Blood Donor (Who gives), Blood Donee (Who receives)
 // locationLat: user's latitude
 // locationLong: user's Longitude
-let User = {
+let user = {
   firstName: 'John',
   lastName: 'Doe',
-  email: 'ásdasdasd@gmail.com',
-  password: 'dfdfdfd',
+  email: 'john.doe@test.com',
+  password: '********',
   bloodType: 1,
   active: true,
   locationLat: 13.312312, 
   locationlong: 18.12332, 
-  created_at: '',
-  updated_at: '', 
+  created_at: Date.now(),
+  updated_at: Date.now(), 
 }
 
 // 24 hours expiration time for the DonationRequest
-let DonationRequest = {
-  BloodDonorId: 1, 
-  BloodDoneeId: 2, 
-  reason: 'I aunt is sick',
+let donationRequest = {
+  bloodDonorId: 1, 
+  bloodDoneeId: 2, 
+  reason: 'She is a vampire!',
   bloodType: 1,
   accepted: true || false,
   created_at: Date.now(),
-  updated_at: ''
+  updated_at: Date.now()
 }
 ```
