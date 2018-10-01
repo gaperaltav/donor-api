@@ -41,7 +41,7 @@ const userSchema = new mongoose.Schema({
   },
   updated_at:  {
     type: String,
-    required: false   
+    required: Date.now()  
   }
 });
 
