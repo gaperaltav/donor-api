@@ -35,13 +35,14 @@ const userSchema = new mongoose.Schema({
     required: false
   },
   created_at:  {
-    type: Date,
-    required: true,  
-    default: Date.now()
+    type: Date, 
+    default: Date.now(),
+    required: false
   },
-  updated_at:  {
-    type: String,
-    required: Date.now()  
+  updated_at: {
+    type: Date,    
+    required: Date.now(),
+    required: false
   }
 });
 

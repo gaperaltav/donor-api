@@ -20,19 +20,15 @@ router.post('/', (req, res, next) => {
 });
 
 router.put('/:id', function (req, res, next) {
-  const id = req.params.id;
-
   User
-    .findOneAndUpdate({ _id: id }, req.body)
+    .findOneAndUpdate({ _id: req.params.id }, req.body)
     .then(user => res.send(user))
     .catch(next);
 });
 
 router.delete('/:id', function (req, res, next) {
-  var id = req.params.id;
-
   User
-    .findOneAndRemove({ _id: id })
+    .findOneAndRemove({ _id: req.params.id })
     .then(user => res.send(`User '${user.firstName}' was deleted correctly.`))
     .catch(next);
 });

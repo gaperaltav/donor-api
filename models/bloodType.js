@@ -10,9 +10,9 @@ const bloodTypeSchema = new mongoose.Schema({
     required: true
   },
   created_at: {
-    type: Date,
-    required: true,
-    default: Date.now()
+    type: Date,   
+    default: Date.now(),
+    required: false
   }
 });
 

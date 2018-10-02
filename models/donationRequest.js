@@ -23,11 +23,13 @@ const donationRequestSchema = new mongoose.Schema({
   },
   created_at: {
     type: Date,
-    default:Date.now() 
+    default:Date.now(),
+    required: false
   },
   updated_at: {
     type: Date,
-    default: Date.now()
+    default: Date.now(),
+    required: false
   }
 });
 
