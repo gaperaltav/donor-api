@@ -9,7 +9,9 @@ const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/blood-donor')
+//MongoDB configurations
+mongoose.connect(process.env.SERVER, { useNewUrlParser: true });
+mongoose.set('useFindAndModify', false);
 
 // Routes
 const donationsRoute = require('./routes/donations');
