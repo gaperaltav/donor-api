@@ -1,13 +1,12 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 //MongoDB configurations
 mongoose.connect(process.env.SERVER, { useNewUrlParser: true });
