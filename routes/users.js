@@ -8,14 +8,14 @@ router.get('/:id*?', (req, res, next) => {
 
   User
     .find(filter)
-    .then(users => res.send(users))
+    .then(users => res.json(users))
     .catch(next);
 });
 
 router.post('/', (req, res, next) => {
   User
     .create(req.body)
-    .then(user => res.send(user))
+    .then(user => res.json(user))
     .catch(next);
 });
 
@@ -28,7 +28,7 @@ router.put('/:id', function (req, res, next) {
 router.delete('/:id', function (req, res, next) {
   User
     .findOneAndRemove({ _id: req.params.id })
-    .then(user => res.send(`User '${user.firstName}' was deleted correctly.`))
+    .then(user => res.json(`User '${user.firstName}' was deleted correctly.`))
     .catch(next);
 });
 
