@@ -21,8 +21,7 @@ router.post('/', (req, res, next) => {
 
 router.put('/:id', function (req, res, next) {
   DonationRequest
-    .findOneAndUpdate({ _id: req.params.id }, req.body)
-    .then(donation => res.send(donation))
+    .findOneAndUpdate({ _id: req.params.id }, req.body, {new: true}, (error, result) => res.send(result))
     .catch(next);
 });
 

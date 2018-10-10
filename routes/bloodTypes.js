@@ -23,8 +23,7 @@ router.put('/:id', function (req, res, next) {
   const id = parseInt(req.params.id);
 
   BloodType
-    .findOneAndUpdate({ id: id }, req.body)
-    .then(type => res.send(type))
+    .findOneAndUpdate({ id: id }, req.body, {new: true}, (error, result) => res.send(result))
     .catch(next);
 });
 
