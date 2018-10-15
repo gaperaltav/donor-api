@@ -12,12 +12,7 @@ router.get('/:id*?', (req, res, next) => {
     .catch(next);
 });
 
-router.post('/', (req, res, next) => {
-
-  const id = BloodType.length + 1;
-
-console.log(BloodType.length);
-  
+router.post('/', (req, res, next) => {  
   BloodType
     .create(req.body)
     .then(type => res.json(type))
@@ -28,7 +23,7 @@ router.put('/:id', function (req, res, next) {
   const id = parseInt(req.params.id);
 
   BloodType
-    .findOneAndUpdate({ id: id }, req.body, {new: true}, (error, result) => res.json(result))
+    .findOneAndUpdate({ id: id }, req.body, {new: true}, (err, type) => res.json(type))
     .catch(next);
 });
 
