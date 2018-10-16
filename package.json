@@ -18,6 +18,7 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "helmet": "^3.14.0",
     "mongoose": "^5.3.1"
   }
 }
