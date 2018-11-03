@@ -29,7 +29,7 @@ app.use('/api/donations', donationsRoute);
 app.use('/api/bloodTypes', bloodTypesRoute);
 app.use('/api/users', usersRoute);
 
-app.get('*', (req, res)=>{
+app.use("*", (req, res)=>{
   res.status(404)        // HTTP status 404: NotFound
   .send('Not found');
 });
