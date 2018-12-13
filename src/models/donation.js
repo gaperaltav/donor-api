@@ -34,4 +34,4 @@ const donations = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Donations', donations);
+module.exports = mongoose.model('Donation', donations);
