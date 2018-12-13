@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const donationRequestSchema = new mongoose.Schema({
+const donations = new mongoose.Schema({
   bloodDonorId: {
     type: Number,
     required: [true, 'Donor is required.']
@@ -14,7 +14,8 @@ const donationRequestSchema = new mongoose.Schema({
     required: [true, 'Reason for donation is required.']
   },
   bloodType: {
-    type: Number,
+    type: String,
+    enum: ['A+', 'B+', 'O+', 'AB+', 'A-', 'B-', 'O-', 'AB-'],
     required: [true, 'Blood type is required.']
   },
   accepted:{
@@ -33,4 +34,4 @@ const donationRequestSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('DonationRequest', donationRequestSchema);
+module.exports = mongoose.model('Donations', donations);

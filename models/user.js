@@ -18,8 +18,9 @@ const userSchema = new mongoose.Schema({
     required: [true, 'The pasword of the user is required.']   
   },
   bloodType: {
-    type: Number,
-    required: [true, 'The blood type of the user is required.']   
+    type: String,
+    enum: ['A+', 'B+', 'O+', 'AB+', 'A-', 'B-', 'O-', 'AB-'],
+    required: [true, 'Blood type is required.']
   },
   isActive:  {
     type: Boolean,

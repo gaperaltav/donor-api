@@ -16,17 +16,15 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 //MongoDB configurations
-mongoose.connect(process.env.SERVER, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGO_CONN, { useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 
 // Routes
 const donationsRoute = require('./routes/donations');
-const bloodTypesRoute = require('./routes/bloodTypes');
 const usersRoute = require('./routes/users');
 
 // Adding Routes path
 app.use('/api/donations', donationsRoute);
-app.use('/api/bloodTypes', bloodTypesRoute);
 app.use('/api/users', usersRoute);
 
 app.get('/', (req, res) => {
