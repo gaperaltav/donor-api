@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 //MongoDB configurations
-mongoose.connect(process.env.MONGO_CONN, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 
 // Routes
