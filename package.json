@@ -8,7 +8,7 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && yarn start",
-    "server": "node ./src/server.js",
+    "server": "node ./src/index.js",
     "seed": "md-seed run --dropdb" 
   },
   "repository": {
