@@ -1,6 +1,9 @@
 const mongooseLib = require('mongoose');
-const UsersSeeder = require('./seeders/users.seeder');
 const dotenv = require('dotenv');
+
+// Importing seeders
+const UsersSeeder = require('./seeders/users.seeder');
+const CompatibilitiesSeeder = require('./seeders/compatibilities.seeder');
 
 dotenv.config();
 
@@ -15,7 +18,9 @@ module.exports = {
     ------
     order is important
   */
+
   seedersList: {
+    CompatibilitiesSeeder,
     UsersSeeder,
   }
 };
