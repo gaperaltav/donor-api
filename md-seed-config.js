@@ -1,15 +1,14 @@
-var mongooseLib = require('mongoose');
-var UsersSeeder = require('./seeders/users.seeder');
+const mongooseLib = require('mongoose');
+const UsersSeeder = require('./seeders/users.seeder');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 mongooseLib.Promise = global.Promise || Promise;
 
 module.exports = {
-
-  // Export the mongoose lib
   mongoose: mongooseLib,
-
-  // Export the mongodb url
-  mongoURL: process.env.MONGO_URL || 'mongodb://localhost:27017/blood-donor',
+  mongoURL: process.env.MONGO_URL,
 
   /*
     Seeders List
