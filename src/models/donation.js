@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
+var ObjectId = mongoose.Schema.Types.ObjectId;
 
 const donations = new mongoose.Schema({
   bloodDonorId: {
-    type: Number,
+    type: ObjectId,
     required: [true, 'Donor is required.']
   }, 
   bloodDoneeId:  {
-    type: Number,
+    type: ObjectId,
     required: [true, 'Donee is required.']
   },
   reason: {
