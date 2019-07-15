@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 // Importing seeders
 const UsersSeeder = require('./seeders/users.seeder');
 const CompatibilitiesSeeder = require('./seeders/compatibilities.seeder');
+const DonationsSeeder =  require('./seeders/donations.seeder');
 
 dotenv.config();
 
@@ -22,5 +23,6 @@ module.exports = {
   seedersList: {
     CompatibilitiesSeeder,
     UsersSeeder,
+    DonationsSeeder,
   }
 };
