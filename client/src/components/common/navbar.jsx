@@ -9,4 +9,4 @@ export const Navbar = () => (
             </Typography>
         </Toolbar>
     </AppBar>
-)
+);
