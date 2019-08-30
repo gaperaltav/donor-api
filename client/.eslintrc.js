@@ -6,6 +6,11 @@ module.exports = {
         "commonjs": true,
         "jest": true,
     },
+    "settings": {
+        "react": {
+            "version": "16.8.0"
+        }
+    },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
