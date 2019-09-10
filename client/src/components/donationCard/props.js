@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
 
 export default {
-    title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
