@@ -1,5 +1,6 @@
-import { initialState } from '../initialState';
+import { combineReducers } from 'redux';
+import donations from './donation';
 
-export const donorReducer = (state = initialState) => {
-  return state;
-};
+export default combineReducers({
+  donations,
+});
