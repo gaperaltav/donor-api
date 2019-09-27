@@ -4,7 +4,7 @@ const ObjectId = require('mongodb').ObjectID;
 
 const data = [
     {
-        bloodDonorId: new ObjectId('5d2bc042d4e3bb2ca9554daf'),
+        bloodDonorId: null,
         bloodDoneeId: new ObjectId('5d2bc2680ef58a2f8a24d438'),
         reason: 'blood transfusion caused by my disease',
         bloodType: 'A+',

@@ -4,9 +4,9 @@ var ObjectId = mongoose.Schema.Types.ObjectId;
 const donations = new mongoose.Schema({
   bloodDonorId: {
     type: ObjectId,
-    required: [true, 'Donor is required.']
-  }, 
-  bloodDoneeId:  {
+    required: false,
+  },
+  bloodDoneeId: {
     type: ObjectId,
     required: [true, 'Donee is required.']
   },
@@ -19,13 +19,13 @@ const donations = new mongoose.Schema({
     enum: ['A+', 'B+', 'O+', 'AB+', 'A-', 'B-', 'O-', 'AB-'],
     required: [true, 'Blood type is required.']
   },
-  accepted:{
+  accepted: {
     type: Boolean,
     default: false
   },
   created_at: {
     type: Date,
-    default:Date.now(),
+    default: Date.now(),
     required: false
   },
   updated_at: {
