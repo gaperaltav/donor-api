@@ -1,12 +1,15 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import style from './style';
 
-export const Navbar = () => (
-  <AppBar position="sticky" >
+const Navbar = () => (
+  <AppBar style={style.AppBar} >
     <Toolbar>
       <Typography variant="h4" >
-        Blood donor
-            </Typography>
+        Donor
+      </Typography>
     </Toolbar>
   </AppBar>
 );
+
+export default Navbar;
