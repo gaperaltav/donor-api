@@ -1,7 +1,13 @@
 export default {
-    card: {
-        maxWidth: '295px',
-        maxHeight: '250px',
-        margin: '10px',
+  card: {
+    width: '100%',
+    minHeight: '95px',
+    margin: '10px',
+    action: {
+      height: '100%',
     },
+    title: {
+      color: '#323232',
+    }
+  },
 };
