@@ -8,5 +8,5 @@ const api = axios.create({
 const fetchDonations = () => api.get('/donations');
 
 export default {
-  fetchDonations
+  fetchDonations,
 };
