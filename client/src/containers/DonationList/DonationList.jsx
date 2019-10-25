@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import DonationCard from '../../components/donationCard/donationCard';
 import { propTypes } from './propTypes';
 import { Box } from '@material-ui/core';
+import { getDonations } from '../../store/actions/donations';
 
-export default class DonationList extends Component {
+class DonationList extends Component {
+
+  componentDidMount() {
+    this.props.getDonations();
+  }
+
   render() {
     const { donations } = this.props;
     return (
@@ -19,4 +27,18 @@ export default class DonationList extends Component {
   }
 }
 
+const mapStateToProps = ({ donations }) => ({
+  donations: donations.data,
+});
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  getDonations,
+},
+  dispatch
+);
+
 DonationList.propTypes = propTypes;
+
+export default connect(mapStateToProps, mapDispatchToProps)(DonationList);
+
+
