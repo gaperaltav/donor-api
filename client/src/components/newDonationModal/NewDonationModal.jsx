@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Modal from '@material-ui/core/Modal';
-import Fade from '@material-ui/core/Fade';
-import { ClickAwayListener, Paper } from '@material-ui/core/';
 import props from './props';
 import style from './style';
+import { Modal, Fade, ClickAwayListener, Paper  } from '@material-ui/core';
 
 class NewDonationModal extends Component {
 

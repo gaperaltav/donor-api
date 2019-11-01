@@ -1,28 +1,52 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import DonationCard from '../../components/donationCard/donationCard';
+import { DonationCard, NewDonationModal } from '../../components/';
 import { propTypes } from './propTypes';
-import { Box } from '@material-ui/core';
+import { Box, Container, Fab } from '@material-ui/core';
 import { getDonations } from '../../store/actions/donations';
+import AddIcon from '@material-ui/icons/Add';
 
 class DonationList extends Component {
 
-  componentDidMount() {
+  state = {
+    isOpenNewDonationModal: false,
+  }
+
+  componentDidMount = () => {
     this.props.getDonations();
   }
+
+  onClickAddButton = () =>
+    this.setState({
+      isOpenNewDonationModal: true,
+    });
+
+    onCloseModal = () => 
+    this.setState({
+      isOpenNewDonationModal: false,
+    });
 
   render() {
     const { donations } = this.props;
     return (
-      <Box display="flex" flexDirection="column" >
-        {donations && donations.map((donation, i) =>
-          <DonationCard
-            key={i}
-            title={donation.reason}
-          />
-        )}
-      </Box>
+      <Container fixed>
+        <Box display="flex" flexDirection="column" >
+          {donations && donations.map((donation, key) =>
+            <DonationCard
+              key={key}
+              title={donation.reason}
+            />
+          )}
+        </Box>
+        <Fab onClick={this.onClickAddButton} color="primary" aria-label="add">
+          <AddIcon />
+        </Fab>
+        <NewDonationModal
+          isOpen={this.state.isOpenNewDonationModal}
+          onClose={this.onCloseModal}
+        />
+      </Container>
     );
   }
 }
