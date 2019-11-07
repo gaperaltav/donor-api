@@ -1,15 +1,26 @@
-import { FETCH_DONATIONS_SUCCEED } from '../actionTypes';
+import * as actions from '../actionTypes';
 import api from '../../services/api';
 
 export const getDonations = () => async (dispatch) => {
-
   const request = await api.fetchDonations();
-
   if (request) {
-    const payloadData = request.data;
     dispatch({
-      type: FETCH_DONATIONS_SUCCEED,
-      payload: payloadData
+      type: actions.FETCH_DONATIONS_SUCCEED,
+      payload: request.data,
     });
+  }
+};
+
+export const AddDonation = (donation) => async (dispatch) => {
+  try {
+    const request = await api.createDonation(donation);
+    if (request) {
+      dispatch({
+        type: actions.ADD_DONATION_SUCCEED,
+        payload: request.data,
+      });
+    }
+  } catch (error) {
+    //TODO: get a way to handle the error.
   }
 };
