@@ -17,6 +17,16 @@ const donations = (state = initialState, action) => {
       };
     }
 
+    case actions.ADD_DONATION_SUCCEED: {
+      return {
+        ...state,
+        data: [
+          ...state.data,
+          action.payload,
+        ]
+      };
+    }
+
     default:
       break;
   }
