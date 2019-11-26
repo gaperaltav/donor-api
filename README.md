@@ -1,14 +1,14 @@
 # Blood donor project
 
-This is the API for [donor app](https://github.com/gaperaltav/donor-app).
+This the main API for [donor app](https://github.com/gaperaltav/donor-app).
 
 ## Running the project
 
-*IMPORTANT:* You shoul have a mongodb server running in you machine.
+*IMPORTANT:* You should have a mongodb server running in you machine.
 
-After the project is cloned, first rename the *.env.example* file to *.env* and fill it with your mongo server's configurations data. 
+After you cloned the project, first rename the *.env.example* file to *.env* and fill it with your mongo server's configurations data. 
 
-Second, open the terminal in the project directory and write the following commands:
+Second, open the terminal in the project's  directory and write the following commands:
 
 ```sh
 # installing dependencies
@@ -26,7 +26,7 @@ npm run dev
 
 ## Seeding the project
 
-If you want to fill the app with a basic data, you should run the following command:
+If you want to fill the app with an example data, you should run the following command:
 
 ```terminal
   npm run seed
@@ -36,7 +36,7 @@ If you want add more seed data you can check the seeders folder in the project.
 
 ## Project structure
 
-These are the basics models of the projects:
+These are the main basics models of the projects:
 
 ```js
 //Types of blood
