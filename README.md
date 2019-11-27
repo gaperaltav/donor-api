@@ -2,9 +2,12 @@
 
 This the main API for [donor app](https://github.com/gaperaltav/donor-app).
 
-## Running the project
+## Requirements
+* NodeJS v12.13.1 or later.
+* npm v6.13.1 or later.
+* MongoDB v4.2.1 or later.
 
-*IMPORTANT:* You should have a mongodb server running in you machine.
+## Running the project
 
 After you cloned the project, first rename the *.env.example* file to *.env* and fill it with your mongo server's configurations data. 
 
@@ -13,7 +16,7 @@ Second, open the terminal in the project's  directory and write the following co
 ```sh
 # installing dependencies
 
-npm i
+npm install
 
 # Run the API
 
