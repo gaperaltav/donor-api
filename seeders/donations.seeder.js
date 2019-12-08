@@ -6,8 +6,9 @@ const data = [
   {
     bloodDonorId: null,
     bloodDoneeId: new ObjectId('5d2bc2680ef58a2f8a24d438'),
-    reason: 'I need a transfusion for an operation',
+    title: 'Transfusion for an operation',
     bloodType: 'A+',
+    description: 'I Will be in a operation tomorrow and I need a blood transfusion ',
     accepted: true,
     created_at: new Date(),
     updated_at: new Date(),
@@ -15,7 +16,8 @@ const data = [
   {
     bloodDonorId: null,
     bloodDoneeId: new ObjectId('5d2bc2680ef58a2f8a24d438'),
-    reason: 'I need a transfusion for a heart operation',
+    title: 'Transfusion for an operation',
+    description: 'I Will be in a operation tomorrow and I need a blood transfusion ',
     bloodType: 'O+',
     accepted: true,
     created_at: new Date(),
@@ -23,7 +25,7 @@ const data = [
   }
 ];
 
-var donationsSeeder = Seeder.extend({
+const donationsSeeder = Seeder.extend({
   shouldRun: function () {
     return Model.countDocuments().exec().then(count => count === 0);
   },

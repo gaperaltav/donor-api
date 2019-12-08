@@ -10,9 +10,13 @@ const donations = new mongoose.Schema({
     type: ObjectId,
     required: [true, 'Donee is required.']
   },
-  reason: {
+  title: {
     type: String,
     required: [true, 'Reason for donation is required.']
+  },
+  description: {
+    type: String,
+    required: [true, 'Description for donation is required.']
   },
   bloodType: {
     type: String,
