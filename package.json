@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon start",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "seed": "md-seed run --dropdb"
   },
   "repository": {
@@ -27,6 +27,7 @@
     "morgan": "^1.9.1"
   },
   "devDependencies": {
+    "jest": "^26.0.1",
     "nodemon": "^2.0.0"
   }
 }
