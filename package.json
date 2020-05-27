@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon start",
-    "test": "jest",
+    "test": "nodemon --exec 'mocha --recursive ./src/tests/*'",
     "seed": "md-seed run --dropdb"
   },
   "repository": {
@@ -27,7 +27,7 @@
     "morgan": "^1.9.1"
   },
   "devDependencies": {
-    "jest": "^26.0.1",
+    "mocha": "^7.2.0",
     "nodemon": "^2.0.0"
   }
 }
