@@ -21,7 +21,7 @@ describe("Testing user models", () => {
     mongoose.connection.collections.users.drop(() => done());
   });
 
-  it("Creating new user", (done) => {
+  it("Creating new User", (done) => {
     const user = new model({
       firstName: "test firstName",
       lastName: "test lastName",
@@ -31,7 +31,7 @@ describe("Testing user models", () => {
       isActive: true,
     });
     user.save().then(() => {
-      assert(!user.isNew); //if poke is saved to db it is not new
+      assert(!user.isNew);
       done();
     });
   });
