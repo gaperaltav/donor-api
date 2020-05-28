@@ -5,7 +5,7 @@ const model = require("../../models/user");
 
 dotenv.config();
 
-describe("Testing user models", () => {
+describe("Testing User models", () => {
   before(() => {
     mongoose.connect(process.env.MONGO_URL, {
       useUnifiedTopology: true,
