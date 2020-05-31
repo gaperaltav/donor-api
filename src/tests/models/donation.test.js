@@ -2,16 +2,14 @@ const mongoose = require("mongoose");
 const assert = require("assert");
 const dotenv = require("dotenv");
 const model = require("../../models/donation");
+const config = require("../../config/mongoose");
 const ObjectId = require("mongodb").ObjectID;
 
 dotenv.config();
 
 describe("Testing Donation models", () => {
   before(() => {
-    mongoose.connect(process.env.MONGO_URL, {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-    });
+    mongoose.connect(process.env.MONGO_URL, config);
   });
 
   after((done) => {

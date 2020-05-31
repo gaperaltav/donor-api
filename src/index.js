@@ -4,6 +4,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const config = require("./config/mongoose");
 
 dotenv.config();
 const app = express();
@@ -18,7 +19,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 //MongoDB configurations
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGO_URL, config);
 
 // Routes
 const donationsRoute = require("./routes/donations");

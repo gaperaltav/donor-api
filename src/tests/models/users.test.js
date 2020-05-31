@@ -2,15 +2,13 @@ const mongoose = require("mongoose");
 const assert = require("assert");
 const dotenv = require("dotenv");
 const model = require("../../models/user");
+const config = require("../../config/mongoose");
 
 dotenv.config();
 
 describe("Testing User models", () => {
   before(() => {
-    mongoose.connect(process.env.MONGO_URL, {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-    });
+    mongoose.connect(process.env.MONGO_URL, config);
   });
 
   after((done) => {

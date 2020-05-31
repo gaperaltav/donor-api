@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const assert = require("assert");
 const dotenv = require("dotenv");
 const model = require("../../models/compatibility");
-const connectionOptions = require("./../../constants/connection-options");
+const config = require("../../config/mongoose");
 
 dotenv.config();
 
 describe("Testing Compatibility models", () => {
   before(() => {
-    mongoose.connect(process.env.MONGO_URL, connectionOptions);
+    mongoose.connect(process.env.MONGO_URL, config);
   });
 
   after((done) => {
