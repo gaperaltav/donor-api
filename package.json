@@ -20,7 +20,7 @@
     "concurrently": "^4.1.0",
     "cors": "^2.8.5",
     "dotenv": "^6.0.0",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "helmet": "^3.14.0",
     "mongoose": "^5.7.5",
     "mongoose-data-seed": "^1.0.7",
